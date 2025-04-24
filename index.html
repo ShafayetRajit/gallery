@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Grid Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="gallery">
+    <!-- Add your images here -->
+    <img src="images/1.jpg"  class="gallery-img">
+    <img src="images/2.jpg"  class="gallery-img">
+    <img src="images/3.jpg"  class="gallery-img">
+    <img src="images/4.jpg"  class="gallery-img">
+    <img src="images/5.jpg"  class="gallery-img">
+    <img src="images/6.jpg"  class="gallery-img">
+    <img src="images/7.jpg"  class="gallery-img">
+    <img src="images/8.jpg"  class="gallery-img">
+    <img src="images/9.jpg"  class="gallery-img">
+    <img src="images/10.jpg"  class="gallery-img">
+    <img src="images/11.jpg"  class="gallery-img">
+    <img src="images/12.jpg"  class="gallery-img">    
+    <img src="images/13.jpg"  class="gallery-img">
+    <img src="images/14.jpg"  class="gallery-img">
+    <img src="images/15.jpg"  class="gallery-img">
+    <img src="images/16.jpg"  class="gallery-img">
+    <img src="images/17.jpg"  class="gallery-img">
+    <img src="images/18.jpg"  class="gallery-img">
+    <img src="images/19.jpg"  class="gallery-img">
+    <img src="images/20.jpg"  class="gallery-img">
+    <!-- Add more images as needed -->
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <!-- <span class="close" id="closeBtn">&times;</span> -->
+    <img id="lightbox-img" src="">
+    <div class="exif-overlay" id="exifData">Loading EXIF data...</div>
+    <span class="nav prev" id="prev">&#10094;</span>
+    <span class="nav next" id="next">&#10095;</span>
+  </div>
+
+  <!-- Bottom Navbar -->
+<div class="bottom-navbar">
+    <div class="nav-left roboto-light">
+      <span class="nav-line white">Tiny Lense</span>
+      <span class="nav-line gray"> of Shafayet Rajit</span></div>
+    <div class="nav-right roboto-light" id="aboutBtn">About</div>
+</div>
+  
+  <!-- About Overlay -->
+<div class="about-overlay" id="aboutOverlay">
+    <div class="about-backdrop" id="aboutBackdrop"></div>
+    <div class="overlay-inner" id="overlayInner">
+        <div class="overlay-content roboto-light">
+            <h2 class="roboto-light">Hello there, my name is Shafayet.</h2>
+            <p class="gray">A passionate amateur photographer exploring the world through various lenses.</p>
+            <br>
+            <p class="gray social-call">Find me on</p>
+            <div class="social-icons">
+                <a href="https://shafayetrajit.github.io/" target="_blank" rel="noopener noreferrer"><i class="fa fa-earth-asia"></i>
+                <a href="https://www.github.com/ShafayetRajit" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
+                <a href="https://in.linkedin.com/in/shafayetrajit" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Background click blocker -->
+  <div id="clickBlocker" class="click-blocker"></div>
+
+  
+
+  <script src="js/exif.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
