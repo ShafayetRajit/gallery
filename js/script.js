@@ -9,20 +9,23 @@ const nextBtn = document.getElementById('next');
 let currentIndex = 0;
 
 function showLightbox(index) {
-    currentIndex = index;
-    const img = galleryImgs[index];
-  
-    lightboxImg.classList.remove('fade-out'); // Remove exit class if it exists
-    lightboxImg.src = img.src;
-    lightbox.style.display = 'flex';
-  
-    // Delay adding .show to trigger animation
-    requestAnimationFrame(() => {
-      lightbox.classList.add('show');
-    });
-  
-    loadExifData(img.src);
-  }
+  currentIndex = index;
+  const img = galleryImgs[index];
+
+  const fullImageSrc = img.getAttribute('data-full') || img.src;
+
+  lightboxImg.classList.remove('fade-out'); // Remove exit class if it exists
+  lightboxImg.src = fullImageSrc;
+  lightbox.style.display = 'flex';
+
+  // Delay adding .show to trigger animation
+  requestAnimationFrame(() => {
+    lightbox.classList.add('show');
+  });
+
+  loadExifData(fullImageSrc); // ✅ Load EXIF from full JPG, not the webp
+}
+
   
 
 function loadExifData(imgSrc) {
@@ -105,20 +108,23 @@ lightbox.addEventListener('click', () => {
 });
 
 function transitionToImage(newIndex) {
-    lightboxImg.classList.add('fade-out');
-  
-    setTimeout(() => {
+  lightboxImg.classList.add('fade-out');
+
+  setTimeout(() => {
       currentIndex = newIndex;
       const img = galleryImgs[currentIndex];
-      lightboxImg.src = img.src;
-  
-      // Once new image is loaded, fade it in
+
+      const fullImageSrc = img.getAttribute('data-full') || img.src;
+
+      lightboxImg.src = fullImageSrc;
+
       lightboxImg.onload = () => {
-        lightboxImg.classList.remove('fade-out');
-        loadExifData(img.src);
+          lightboxImg.classList.remove('fade-out');
+          loadExifData(fullImageSrc); // ✅ Again, load EXIF from JPG
       };
-    }, 200); // Matches fade-out duration
-  }
+  }, 200); // Matches fade-out duration
+}
+
   
   
 
