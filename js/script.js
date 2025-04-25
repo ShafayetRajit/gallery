@@ -125,6 +125,17 @@ function transitionToImage(newIndex) {
   }, 200); // Matches fade-out duration
 }
 
+// ✅ Preload all full-size images (the JPGs) after page loads
+window.addEventListener('load', () => {
+  galleryImgs.forEach(img => {
+    const fullImageSrc = img.getAttribute('data-full');
+    if (fullImageSrc) {
+      const preloadImg = new Image();
+      preloadImg.src = fullImageSrc;
+    }
+  });
+});
+
   
   
 
