@@ -141,14 +141,14 @@ document.getElementById('current-year').textContent = new Date().getFullYear();
 
 
   const greetingPhrases = [
-    "Oh, you came unannounced! <br> Let me just finish tidying the gallery...<br>While we get things ready, enjoy these tidbits!",
-    "Look who dropped by without warning! <br> One sec...sweeping up some stray snapshots!<br>While we get things ready, enjoy these tidbits!",
-    "A surprise guest! Just a moment. <br> I'm straightening the frames and dusting the pixels.<br>While we get things ready, enjoy these tidbits!",
-    "You snuck in quietly, huh? <br> Just adjusting the light and shadows...won't be long!<br>While we get things ready, enjoy these tidbits!",
-    "Whoa, unexpected company! <br> Getting the gallery dressed up for you. Patience, please!<br>While we get things ready, enjoy these tidbits!",
-    "An unannounced visit! I love it! <br> The memories are combing their hair, preparing for you!<br>While we get things ready, enjoy these tidbits!",
-    "Pardon the mess. I didn't know you'd pop in! <br> Still fluffing the clouds and sunsets. Almost done!<br>While we get things ready, enjoy these tidbits!",
-    "You came early! Let me tidy up quickly.<br>While we get things ready, enjoy these tidbits!"
+    "Oh, you came unannounced! <br> Let me just finish tidying the gallery...<br><br>While we get things ready, enjoy these tidbits!",
+    "Look who dropped by without warning! <br> One sec...sweeping up some stray snapshots!<br><br>While we get things ready, enjoy these tidbits!",
+    "A surprise guest! Just a moment. <br> I'm straightening the frames and dusting the pixels.<br><br>While we get things ready, enjoy these tidbits!",
+    "You snuck in quietly, huh? <br> Just adjusting the light and shadows...won't be long!<br><br>While we get things ready, enjoy these tidbits!",
+    "Whoa, unexpected company! <br> Getting the gallery dressed up for you. Patience, please!<br><br>While we get things ready, enjoy these tidbits!",
+    "An unannounced visit! I love it! <br> The memories are combing their hair, preparing for you!<br><br>While we get things ready, enjoy these tidbits!",
+    "Pardon the mess. I didn't know you'd pop in! <br> Still fluffing the clouds and sunsets. Almost done!<br><br>While we get things ready, enjoy these tidbits!",
+    "You came early! Let me tidy up quickly.<br><br>While we get things ready, enjoy these tidbits!"
   ];
 
   const photoFacts = [
