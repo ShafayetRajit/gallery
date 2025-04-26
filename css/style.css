@@ -4,6 +4,48 @@ body {
     background: #111;
     color: #fff;
   }
+
+  #loading-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111; /* or any dark color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    z-index: 2000;
+  }
+  
+  .loading-text {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+    animation: blink 1.5s infinite alternate;
+  }
+
+  .photo-fact {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    margin-top: 20px;  
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* (Optional) Blinking animation to make it lively */
+  @keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+  
   
   .gallery {
     display: grid;
@@ -192,13 +234,13 @@ body {
   background: #222;
   color: #eee;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: flex-start; /* Push content to the top */
+  align-items: center; /* Center horizontally */
   padding: 20px;
   box-sizing: border-box;
   overflow: auto;
   z-index: 2;
-
   /* Initial off-screen position */
   transform: translateY(100%);
   transition: transform 0.4s ease-in-out; /* Smooth, slow slide */
@@ -311,3 +353,5 @@ body {
       display: none;
     }
   }
+
+  

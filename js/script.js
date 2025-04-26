@@ -136,6 +136,56 @@ window.addEventListener('load', () => {
   });
 });
 
+document.getElementById('current-year').textContent = new Date().getFullYear();
+
+
+
+  const greetingPhrases = [
+    "Oh, you came unannounced! <br> Let me just finish tidying the gallery...<br>While we get things ready, enjoy these tidbits!",
+    "Look who dropped by without warning! <br> One sec...sweeping up some stray snapshots!<br>While we get things ready, enjoy these tidbits!",
+    "A surprise guest! Just a moment. <br> I'm straightening the frames and dusting the pixels.<br>While we get things ready, enjoy these tidbits!",
+    "You snuck in quietly, huh? <br> Just adjusting the light and shadows...won't be long!<br>While we get things ready, enjoy these tidbits!",
+    "Whoa, unexpected company! <br> Getting the gallery dressed up for you. Patience, please!<br>While we get things ready, enjoy these tidbits!",
+    "An unannounced visit! I love it! <br> The memories are combing their hair, preparing for you!<br>While we get things ready, enjoy these tidbits!",
+    "Pardon the mess. I didn't know you'd pop in! <br> Still fluffing the clouds and sunsets. Almost done!<br>While we get things ready, enjoy these tidbits!",
+    "You came early! Let me tidy up quickly.<br>While we get things ready, enjoy these tidbits!"
+  ];
+
+  const photoFacts = [
+    "The first color photograph was taken in 1861 by James Clerk Maxwell.",
+    "The word 'photography' means 'drawing with light' in Greek.",
+    "The oldest surviving photograph is from 1826 — it took 8 hours to expose!",
+    "The most expensive photograph ever sold is worth $4.3 million.",
+    "Digital cameras were invented long before smartphones — in the 1970s!",
+    "Kodak built the first digital camera prototype in 1975 — it was huge!",
+    "Early cameras needed several minutes of exposure time for a single photo.",
+    "Today, more pictures are taken every two minutes than in all of the 19th century."
+  ];
+
+  // Pick random greeting and message
+  const randomGreeting = greetingPhrases[Math.floor(Math.random() * greetingPhrases.length)];
+
+  // Set it inside the loading-text div
+  document.getElementById('loading-text').innerHTML = randomGreeting;
+
+    // Function to show a random photography fact
+    function showRandomFact() {
+      const randomFact = photoFacts[Math.floor(Math.random() * photoFacts.length)];
+      document.getElementById('photo-fact').textContent = randomFact;
+    }
   
+    // Show first fact immediately
+    showRandomFact();
+  
+    // Update the fact every 10 seconds
+    const factInterval = setInterval(showRandomFact, 10000);
+  
+    // When page is fully loaded
+    window.addEventListener('load', function() {
+      document.getElementById('loading-screen').style.display = 'none';
+      clearInterval(factInterval); // Stop changing facts after loading
+    });
+
+
   
 
