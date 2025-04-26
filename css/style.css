@@ -282,6 +282,21 @@ body {
       "wdth" 100;
 }
 
+/* Hide the <br> on small screens */
+@media (max-width: 768px) {
+  .responsive-br {
+    display: none;
+  }
+}
+
+/* Show the <br> normally on desktop */
+@media (min-width: 769px) {
+  .responsive-br {
+    display: inline;
+  }
+}
+
+
 .click-blocker {
     position: fixed;
     top: 0; left: 0;
